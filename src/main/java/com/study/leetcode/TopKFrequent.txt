@@ -1,0 +1,51 @@
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.TreeMap;
+
+class ValueComparator implements Comparator<Integer> {
+	HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+	public ValueComparator(HashMap<Integer,Integer> m) {
+		map.putAll(m);
+	}
+	
+	public int compare(Integer a, Integer b) {
+		int d = map.get(b) - map(a);
+		if (d == 0) {
+			return 1;
+		} else {
+			return d;
+		}
+	}
+}
+
+public class TopKFrequent {
+
+	public List<Integer> getTopKFrequent(int []nums, int k) {
+		List<Integer> result = new ArrayList<Integer>();
+		HashMap<Integer,Integer> couter = new HashMap<Integer,Integer>();
+		for (int i : nums) {
+			if (counter.containsKey(i)) {
+				counter.put(i, counter.get(i) + 1);
+			} else {
+				counter.put(i, 1);
+			}
+		}
+		TreeMap<Integer, Integer> sortedMap = new TreeMap<Integer, Integer>(new ValueComparator(couter));
+		sortedMap.putAll(counter);
+		
+		int i = 0;
+		for (Map.Entry<Integer,Integer> entry : sortedMap.entrySet()) {
+			result.add(entry.getKey());
+			i++;
+			if (i == k) {
+				break;
+			}
+		}
+		
+		return result;
+	}
+
+}

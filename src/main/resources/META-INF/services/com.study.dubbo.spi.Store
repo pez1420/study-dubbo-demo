@@ -1,0 +1,2 @@
+com.study.dubbo.spi.MysqlStore
+com.study.dubbo.spi.RedisStore
