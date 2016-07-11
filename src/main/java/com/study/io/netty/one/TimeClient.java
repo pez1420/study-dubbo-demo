@@ -28,12 +28,10 @@ class TimeClientHandler extends ChannelHandlerAdapter {
 		ctx.close();
 	}
 
-	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		ctx.writeAndFlush(firstMessage);
 	}
 
-	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		ByteBuf buf = (ByteBuf)msg;
 		byte[] req = new byte[buf.readableBytes()];

@@ -20,7 +20,6 @@ class TimServerHander extends ChannelHandlerAdapter {
 		ctx.close();
 	}
 
-	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		ByteBuf buf = (ByteBuf)msg;
 		byte[] req = new byte[buf.readableBytes()];
@@ -34,7 +33,6 @@ class TimServerHander extends ChannelHandlerAdapter {
 		ctx.write(resp);
 	}
 
-	@Override
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
 		ctx.flush();
 	}

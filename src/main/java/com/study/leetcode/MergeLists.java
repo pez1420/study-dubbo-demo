@@ -95,7 +95,7 @@ public class MergeLists {
 		ListNode head = new ListNode(0);
 		ListNode p = head; // serve as a pointer/cursor
 
-		while (q.size() > 0) {
+		while (q.size() > 0) { 
 			ListNode temp = q.poll();
 			// poll() retrieves and removes the head of the queue - q.
 			p.next = temp;
@@ -154,10 +154,28 @@ public class MergeLists {
 		lists.add(l3);
 		lists.add(l4);
 		ListNode p = new MergeLists().mergeKLists(lists);
-		printListNode(p);
+		//printListNode(p);
+		test();
 		
 	}
 
+	public static void test() {
+		 PriorityQueue<String> pq = new PriorityQueue<String>();
+	        pq.add("dog");
+	        pq.add("apple");
+	        pq.add("fox");
+	        pq.add("easy");
+	        pq.add("boy");
+	        
+	        while (!pq.isEmpty()) {
+	            for (String s : pq) {
+	                System.out.print(s + " ");
+	            }
+	            System.out.println();
+	            System.out.println("pq.poll(): " + pq.poll());
+	        }
+	}
+	
 	public Node mergeSortedLists(Node list1, Node list2) {
 		if (list1 == null)
 			return list2;
