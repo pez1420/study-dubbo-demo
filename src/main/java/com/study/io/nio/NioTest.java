@@ -2,7 +2,6 @@ package com.study.io.nio;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
 
 
 public class NioTest {
@@ -43,7 +42,17 @@ public class NioTest {
 			}
 		}
 		
-		//SelectionKey.OP_ACCEPT;
+		   String sendString = "dddd";
+		   try {
+				ByteBuffer sendBuffer = ByteBuffer.wrap(sendString.getBytes());
+				sendBuffer.flip();
+				byte[] sendMsg = new byte[sendBuffer.limit()];
+				sendBuffer.get(sendMsg);
+				System.out.println(new String(sendMsg, "utf-8"));
+		   } catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+		   }
+		    
 	}
 
 }
