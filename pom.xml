@@ -165,27 +165,5 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>com.shaobing.framework</groupId>
-				<artifactId>system-statis-plugin</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-				<configuration>
-					<includes>
-						<include>xqy</include>
-					</includes>
-				</configuration>
-				<executions>
-					<execution>
-						<id>sysname-statis</id>
-						<phase>package</phase>
-						<goals>
-							<goal>sysname-statis</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-		</plugins>
 	</build>
 </project>
