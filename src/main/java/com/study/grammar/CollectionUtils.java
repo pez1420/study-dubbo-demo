@@ -14,7 +14,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class CollectionUtils {
-
+/*
 	public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
 		Set<E> s = new HashSet<E>(s1);
 		s.addAll(s2);
@@ -25,13 +25,11 @@ public class CollectionUtils {
 		return Collections.emptyList();
 	}
 
-	@Test
 	public void emptyList() {
 		List<Integer> ints = getEmptyIntegers();
 		Assert.assertTrue(ints != null && ints.size() == 0);
 	}
 
-	@Test
 	public void consumeForConditon() {
 		StringBuilder idsBuilder = new StringBuilder();
 		for (int i = 0; i < 1000000; i++)
@@ -51,7 +49,6 @@ public class CollectionUtils {
 		Assert.assertTrue("timeOne > timeTwo", timeOne > timeTwo);
 	}
 
-	@Test
 	public void clearMap() {
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("key", "value");
@@ -76,7 +73,6 @@ public class CollectionUtils {
 
 	}
 
-	@Test
 	public void containList() {
 		List<String> list = new ArrayList<String>();
 		list.add("a"); // 向列表中添加数据
@@ -85,7 +81,7 @@ public class CollectionUtils {
 		String o = "d";
 		System.out.println("list对象中是否包含元素" + o + ":" + list.contains(o));
 		
-		List<Integer> customerIdList = new ArrayList<>();
+		List<Integer> customerIdList = new ArrayList<Integer>();
 		customerIdList.add(1);
 		customerIdList.add(2);
 		customerIdList.add(3);
@@ -101,4 +97,5 @@ public class CollectionUtils {
 		System.out.println(customerIdList);
 		
 	}
+}*/
 }
