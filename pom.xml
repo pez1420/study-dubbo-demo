@@ -5,7 +5,7 @@
 	<artifactId>study-dubbo-deom</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 		<spring.version>3.2.8.RELEASE</spring.version>
 		<spring.test.version>4.1.7.RELEASE</spring.test.version>
 		<mybatis.version>3.2.8</mybatis.version>
