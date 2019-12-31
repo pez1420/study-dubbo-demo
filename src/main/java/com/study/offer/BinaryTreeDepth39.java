@@ -13,11 +13,14 @@ class TreeNode {
 public class BinaryTreeDepth39 {
 
 	public static int deepth(TreeNode root) {
-		if (root == null)
+		if (root == null) {
 			return 0;
+		}
+
 		int left = deepth(root.leftNode);
 		int right = deepth(root.leftNode);
-		//既有左子树又有右子树, 那么树的深度就是当前较大值加1
+		// 浜屽弶鏍戠殑鏍硅妭鐐规棦鏈夊彸瀛愭爲鍙堟湁宸﹀瓙鏍戯紝閭ｄ箞鍙互鍒ゆ柇锛岄偅涔堜簩鍙夋爲鐨勬繁搴﹀簲璇ユ槸鍏跺乏鍙冲瓙鏍戠殑娣卞害杈冨ぇ鍊煎姞1
+
 		return left > right ? left + 1 : right + 1;
 	}
 	public static void main(String[] args) {
