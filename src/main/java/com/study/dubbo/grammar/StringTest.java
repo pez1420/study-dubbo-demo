@@ -30,6 +30,9 @@ public class StringTest {
 	}
 	
 	public static void main(String[] args) {
+        test1();
+        test2();
+        test3();
 		test4();
 	}
 
